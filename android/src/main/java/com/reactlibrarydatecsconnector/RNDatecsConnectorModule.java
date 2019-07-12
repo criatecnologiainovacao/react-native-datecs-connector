@@ -1,12 +1,16 @@
 
 package com.reactlibrarydatecsconnector;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.widget.Toast;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+
+import java.util.Set;
 
 public class RNDatecsConnectorModule extends ReactContextBaseJavaModule {
 
@@ -23,9 +27,10 @@ public class RNDatecsConnectorModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void show(String text) {
-    Context context = getReactApplicationContext();
-    Toast.makeText(context, text, Toast.LENGTH_LONG).show();
+  public Set<BluetoothDevice> listDevices() {
+
+    BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
+    return defaultAdapter.getBondedDevices();
   }
 
 }

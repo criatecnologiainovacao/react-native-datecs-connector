@@ -1,0 +1,18 @@
+
+{
+  "name": "react-native-datecs-connector",
+  "version": "0.0.1",
+  "description": "Biblioteca de conexão com impressoras datecs para ReactNative",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Cria",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.59.9"
+  }
+}

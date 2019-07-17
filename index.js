@@ -1,6 +1,5 @@
 
 import { NativeModules } from 'react-native';
+const {BluetoothManager}= NativeModules;
 
-const { RNDatecsConnector } = NativeModules;
-
-export default RNDatecsConnector;
+ module.exports ={ BluetoothManager };

@@ -1,0 +1,5 @@
+rootProject.name = 'examples'
+include ':react-native-datecs-connector'
+project(':react-native-datecs-connector').projectDir = new File(rootProject.projectDir, '../react-native-datecs-connector/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'

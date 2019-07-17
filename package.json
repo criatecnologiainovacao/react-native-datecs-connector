@@ -1,18 +1,21 @@
-
 {
   "name": "react-native-datecs-connector",
-  "version": "0.0.1",
-  "description": "Biblioteca de conexão com impressoras datecs para ReactNative",
+  "version": "0.0.5",
+  "description": "React-Native plugin for the bluetooth ESC/POS printers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ESC",
+    "POS",
+    "Bluetooth",
+    "Printer"
   ],
-  "author": "Cria",
-  "license": "",
+  "author": "janus j k lu",
+  "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.59.9"
+    "react-native": ">=0.55.4"
   }
 }

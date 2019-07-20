@@ -169,12 +169,12 @@ public class RNBluetoothManagerModule extends ReactContextBaseJavaModule
 
     private void printTemplate(String template) throws IOException {
 
-        String imageRegex = "\\{image\\=([^\"])+\\}";
+        String imageRegex = "\\{image\\=([0-9a-zA-Z\\+/=]{20,})\\}";
 
         String[] templatesText = template.split(imageRegex);
 
         List<String> tagsImagens = getImagesTags(template, imageRegex);
-        String[] imagesSource = getImagesSources(tagsImagens);
+            String[] imagesSource = getImagesSources(tagsImagens);
 
         int i=0;
         int imagesArraySize = imagesSource.length;

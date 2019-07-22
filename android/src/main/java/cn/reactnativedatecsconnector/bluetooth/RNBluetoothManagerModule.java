@@ -131,9 +131,10 @@ public class RNBluetoothManagerModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public void printerTemplate(String template) {
+    public void printerTemplate(String template, final Promise promise) {
         try {
             initPrinter(mSocket.getInputStream(), mSocket.getOutputStream(), template);
+            promise.resolve(null);
         } catch (IOException e) {
             return;
         }
